@@ -1,5 +1,4 @@
 # Optimization-Benchmarks
-<<<<<<< HEAD
 This is a simple program that shows the performance differences of different styles of coding.
 
 Some notes and thoughts about this project:
