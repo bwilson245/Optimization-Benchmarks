@@ -1,4 +1,5 @@
 # Optimization-Benchmarks
+<<<<<<< HEAD
 This is a simple program that shows the performance differences of different styles of coding.
 
 Some notes and thoughts about this project:
@@ -25,3 +26,6 @@ has created more questions that it answered.
 - The biggest surprise to me is the optimized traditional for loop. It amazes me that the same result can be achieved
 in a faster amount of time, just by moving around a few things. It really opens up a can of worms when it comes to 
 understanding the JVM.
+
+Source: https://www.infoworld.com/article/2077647/make-java-fast--optimize-.html?page=3
+
