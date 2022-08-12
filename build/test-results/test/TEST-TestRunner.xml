@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-12T20:28:33" hostname="BENWILSON" time="18.346">
+  <properties/>
+  <testcase name="run_all_tests()" classname="TestRunner" time="18.346"/>
+  <system-out><![CDATA[****************************************************************************************************
+* ---------- VariableBenchmark Integer Test Results ----------
+* unOptimized average processing time in nanoseconds: 24947
+* optimized average processing time in nanoseconds:   9441
+* overall speed improvement in nanoseconds:           15506
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- VariableBenchmark Long Test Results ----------
+* unOptimized average processing time in nanoseconds: 26074
+* optimized average processing time in nanoseconds:   10358
+* overall speed improvement in nanoseconds:           15716
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- VariableBenchmark Float Test Results ----------
+* unOptimized average processing time in nanoseconds: 31331
+* optimized average processing time in nanoseconds:   11181
+* overall speed improvement in nanoseconds:           20150
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- VariableBenchmark Double Test Results ----------
+* unOptimized average processing time in nanoseconds: 31774
+* optimized average processing time in nanoseconds:   10903
+* overall speed improvement in nanoseconds:           20871
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- VariableBenchmark Character Test Results ----------
+* unOptimized average processing time in nanoseconds: 26388
+* optimized average processing time in nanoseconds:   11382
+* overall speed improvement in nanoseconds:           15006
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- LoopBenchmark Test Results ----------
+* unOptimized average processing time in nanoseconds: 75941
+* optimized average processing time in nanoseconds:   59289
+* overall speed improvement in nanoseconds:           16652
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- BinarySearchBenchmark Test Results ----------
+* unOptimized average processing time in nanoseconds: 13522
+* optimized average processing time in nanoseconds:   1577
+* overall speed improvement in nanoseconds:           11945
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- ObjectInstantiationBenchmark Test Results ----------
+* unOptimized average processing time in nanoseconds: 128207
+* optimized average processing time in nanoseconds:   103553
+* overall speed improvement in nanoseconds:           24654
+****************************************************************************************************
+
+****************************************************************************************************
+* ---------- ConcurrencyBenchmark Test Results ----------
+* unOptimized average processing time in nanoseconds: 25687625
+* optimized average processing time in nanoseconds:   13477290
+* overall speed improvement in nanoseconds:           12210335
+****************************************************************************************************
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

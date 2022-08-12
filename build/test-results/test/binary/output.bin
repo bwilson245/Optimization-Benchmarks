@@ -1,6 +1,63 @@
-Ê********************************************************************************************************************************************************************************************************
-N* unOptimized instantiation average processing time in nanoseconds: 52461882
-N* optimized instantiation average processing time in nanoseconds:   30677357
-E* overall speed improvement in nanoseconds:                21784525
-Ê********************************************************************************************************************************************************************************************************
+f****************************************************************************************************
+@* ---------- VariableBenchmark Integer Test Results ----------
+=* unOptimized average processing time in nanoseconds: 24947
+<* optimized average processing time in nanoseconds:   9441
+=* overall speed improvement in nanoseconds:           15506
+f****************************************************************************************************
+
+f****************************************************************************************************
+=* ---------- VariableBenchmark Long Test Results ----------
+=* unOptimized average processing time in nanoseconds: 26074
+=* optimized average processing time in nanoseconds:   10358
+=* overall speed improvement in nanoseconds:           15716
+f****************************************************************************************************
+
+f****************************************************************************************************
+>* ---------- VariableBenchmark Float Test Results ----------
+=* unOptimized average processing time in nanoseconds: 31331
+=* optimized average processing time in nanoseconds:   11181
+=* overall speed improvement in nanoseconds:           20150
+f****************************************************************************************************
+
+f****************************************************************************************************
+?* ---------- VariableBenchmark Double Test Results ----------
+=* unOptimized average processing time in nanoseconds: 31774
+=* optimized average processing time in nanoseconds:   10903
+=* overall speed improvement in nanoseconds:           20871
+f****************************************************************************************************
+
+f****************************************************************************************************
+B* ---------- VariableBenchmark Character Test Results ----------
+=* unOptimized average processing time in nanoseconds: 26388
+=* optimized average processing time in nanoseconds:   11382
+=* overall speed improvement in nanoseconds:           15006
+f****************************************************************************************************
+
+f****************************************************************************************************
+4* ---------- LoopBenchmark Test Results ----------
+=* unOptimized average processing time in nanoseconds: 75941
+=* optimized average processing time in nanoseconds:   59289
+=* overall speed improvement in nanoseconds:           16652
+f****************************************************************************************************
+
+f****************************************************************************************************
+<* ---------- BinarySearchBenchmark Test Results ----------
+=* unOptimized average processing time in nanoseconds: 13522
+<* optimized average processing time in nanoseconds:   1577
+=* overall speed improvement in nanoseconds:           11945
+f****************************************************************************************************
+
+f****************************************************************************************************
+C* ---------- ObjectInstantiationBenchmark Test Results ----------
+>* unOptimized average processing time in nanoseconds: 128207
+>* optimized average processing time in nanoseconds:   103553
+=* overall speed improvement in nanoseconds:           24654
+f****************************************************************************************************
+
+f****************************************************************************************************
+;* ---------- ConcurrencyBenchmark Test Results ----------
+@* unOptimized average processing time in nanoseconds: 25687625
+@* optimized average processing time in nanoseconds:   13477290
+@* overall speed improvement in nanoseconds:           12210335
+f****************************************************************************************************
 

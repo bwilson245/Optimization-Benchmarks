@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class BinarySearchBenchmark extends Benchmark {
     int target;
     int[] array;
@@ -8,22 +10,24 @@ public class BinarySearchBenchmark extends Benchmark {
         this.array = buildArray(iterationCount);
     }
 
-    public void unOptimizedSearch() {
-        for (int i = 0; i < totalCalls; i++) {
+    public void unOptimizedTest() {
+        int i;
+        for (i = 0; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < array.length; ) {
+            for (j = 0; j++ < array.length - 1; ) {
                 if (array[j] == target) {
                     break;
                 }
             }
-            processTimes.add(System.nanoTime() - time);
+            add(System.nanoTime() - time);
         }
         calculate();
     }
 
-    public void optimizedSearch() {
-        for (int i = 0; i < totalCalls; i++) {
+    public void optimizedTest() {
+        int i;
+        for (i = 0; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int high = array.length - 1;
             int low = 0;
@@ -39,7 +43,7 @@ public class BinarySearchBenchmark extends Benchmark {
                     high = mid - 1;
                 }
             }
-            processTimes.add(System.nanoTime() - time);
+            add(System.nanoTime() - time);
         }
         calculate();
     }
@@ -47,7 +51,7 @@ public class BinarySearchBenchmark extends Benchmark {
     private int[] buildArray(int size) {
         int[] result = new int[size];
         int i;
-        for (i = result.length; i-- > 0; ) {
+        for (i = 0; i++ < size - 1; ) {
             result[i] = i;
         }
         return result;

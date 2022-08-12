@@ -4,7 +4,7 @@ public class LoopBenchmark extends Benchmark{
         super(totalCalls, iterationCount);
     }
 
-    public void unOptimizedLoop() {
+    public void unOptimizedTest() {
         for (int i = 0; i < totalCalls; i++) {
             long time = System.nanoTime();
             for (int j = 0; j < iterationCount; j++) {
@@ -15,17 +15,17 @@ public class LoopBenchmark extends Benchmark{
                     res = "!".repeat(50);
                 }
             }
-            processTimes.add(System.nanoTime() - time);
+            add(System.nanoTime() - time);
         }
         calculate();
     }
 
-    public void optimizedLoop() {
+    public void optimizedTest() {
         int i;
-        for (i = totalCalls; i-- >= 0; ) {
+        for (i = 0; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount; ) {
+            for (j = 0; j++ < iterationCount - 1; ) {
                 String res;
                 if (j % 3 == 0) {
                     res = "*".repeat(200);
@@ -33,7 +33,7 @@ public class LoopBenchmark extends Benchmark{
                     res = "!".repeat(50);
                 }
             }
-            processTimes.add(System.nanoTime() - time);
+            add(System.nanoTime() - time);
         }
         calculate();
     }

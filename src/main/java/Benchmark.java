@@ -21,6 +21,11 @@ public abstract class Benchmark {
         this.avgProcessTimeInNanoSeconds = sum / this.processTimes.size();
     }
 
+    public void add(long time) {
+        processTimes.add(time);
+        System.gc();
+    }
+
     public long getAvgProcessTimeInNanoSeconds() {
         return avgProcessTimeInNanoSeconds;
     }
