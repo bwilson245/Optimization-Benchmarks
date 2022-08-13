@@ -2,8 +2,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ConcurrencyBenchmark extends Benchmark{
-    public ConcurrencyBenchmark(int totalCalls, int iterationCount) {
+public class ConcurrencyOptimizations extends Optimizations {
+    public ConcurrencyOptimizations(int totalCalls, int iterationCount) {
         super(totalCalls, iterationCount);
     }
 

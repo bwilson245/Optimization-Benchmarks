@@ -1,15 +1,15 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ObjectInstantiationBenchmarkTest implements TestInterface {
+public class ObjectInstantiationOptimizationsTest implements TestInterface {
     int totalCalls = 100;
     int totalIterations = 1000;
 
     @Test
     public void run() {
         //GIVEN
-        ObjectInstantiationBenchmark unOptimized = new ObjectInstantiationBenchmark(totalCalls, totalIterations);
-        ObjectInstantiationBenchmark optimized = new ObjectInstantiationBenchmark(totalCalls, totalIterations);
+        ObjectInstantiationOptimizations unOptimized = new ObjectInstantiationOptimizations(totalCalls, totalIterations);
+        ObjectInstantiationOptimizations optimized = new ObjectInstantiationOptimizations(totalCalls, totalIterations);
 
         //WHEN
         unOptimized.unOptimizedTest();
@@ -19,7 +19,7 @@ public class ObjectInstantiationBenchmarkTest implements TestInterface {
         Assertions.assertTrue(unOptimized.getAvgProcessTimeInNanoSeconds() > optimized.getAvgProcessTimeInNanoSeconds());
 
         System.out.println("*".repeat(100));
-        System.out.println("* ---------- ObjectInstantiationBenchmark Test Results ----------");
+        System.out.println("* ---------- ObjectInstantiationOptimizations Test Results ----------");
         System.out.println("* " + "unOptimized average processing time: " + unOptimized.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("* " + "optimized average processing time:   " + optimized.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("-".repeat(100));

@@ -1,10 +1,8 @@
-import java.util.Arrays;
-
-public class BinarySearchBenchmark extends Benchmark {
+public class BinarySearchOptimizations extends Optimizations {
     int target;
     int[] array;
 
-    public BinarySearchBenchmark(int totalCalls, int iterationCount, int target) {
+    public BinarySearchOptimizations(int totalCalls, int iterationCount, int target) {
         super(totalCalls, iterationCount);
         this.target = target;
         this.array = buildArray(iterationCount);

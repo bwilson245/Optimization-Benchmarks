@@ -3,7 +3,7 @@ import utility.Node;
 
 import java.util.*;
 
-public class BinaryTreeBenchmark extends Benchmark{
+public class BinaryTreeOptimizations extends Optimizations {
     private Node node;
     private int target;
     private List<Double> memoryUsed;
@@ -11,7 +11,7 @@ public class BinaryTreeBenchmark extends Benchmark{
     private String memType;
     private double avgMemoryUsed;
 
-    public BinaryTreeBenchmark(int totalCalls, int iterationCount, int target, String memType) {
+    public BinaryTreeOptimizations(int totalCalls, int iterationCount, int target, String memType) {
         super(totalCalls, iterationCount);
         this.node = Node.build(0, iterationCount);
         this.target = target;

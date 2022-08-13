@@ -1,8 +1,6 @@
-import java.lang.management.GarbageCollectorMXBean;
+public class VariableOptimizations extends Optimizations {
 
-public class VariableBenchmark extends Benchmark {
-
-    public VariableBenchmark(int totalCalls, int iterationCount) {
+    public VariableOptimizations(int totalCalls, int iterationCount) {
         super(totalCalls, iterationCount);
     }
 

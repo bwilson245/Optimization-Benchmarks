@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Benchmark {
+public abstract class Optimizations {
     private List<Long> processTimes;
     private long avgProcessTimeInNanoSeconds;
     protected int totalCalls;
     protected int iterationCount;
 
-    public Benchmark(int totalCalls, int iterationCount) {
+    public Optimizations(int totalCalls, int iterationCount) {
         this.totalCalls = totalCalls;
         this.iterationCount = iterationCount;
         this.processTimes = new ArrayList<>();

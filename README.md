@@ -1,4 +1,4 @@
-# Optimization-Benchmarks
+# Optimizations
 This is a simple program that shows the performance differences of different styles of coding.
 
 Some notes and thoughts about this project:
@@ -11,9 +11,9 @@ reason that you could provide decent optimization by using an enhanced for loop 
 readability of your code.
     
  
-- When I implemented the VariableBenchmark class, I was perplexed because the results were inconsistent. I knew that
+- When I implemented the VariableOptimizations class, I was perplexed because the results were inconsistent. I knew that
 couldn't be the case because one method was using the primitives' wrapper class, and from what I knew from the
-ObjectInstantiationBenchmark, creating new objects has quite the overhead. The thought occurred to me that I was running
+ObjectInstantiationOptimizations, creating new objects has quite the overhead. The thought occurred to me that I was running
 the unOptimized method first and maybe at some point during the optimized method, java was running garbage collection.
 I decided to create the add() method instead of utilizing the List's built in add method so that I could call System.gc()
 after adding the results of the test to hopefully prevent java from interfering with the test results. Afterwards, the 
@@ -27,7 +27,7 @@ in a faster amount of time, just by moving around a few things. It really opens 
 understanding the JVM.
   
 
-- I did my best to implement benchmarks for a balanced binary tree. First, I implemented methods for testing the 
+- I did my best to implement optimizations for a balanced binary tree. First, I implemented methods for testing the 
 processing time of a recursive and iterative search and each had a depth-first implementation and a breadth-first implementation
 for a total of 4 different search patterns. Then I had the idea to test the memory usage of each method. I started by 
 calculating the memory in the same methods I used to calculate time, however that caused the results of the process 

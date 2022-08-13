@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class BinarySearchBenchmarkTest implements TestInterface {
+public class BinarySearchOptimizationsTest implements TestInterface {
     int totalCalls = 100;
     int totalIterations = 1000;
     int target = totalIterations - 1;
@@ -9,8 +9,8 @@ public class BinarySearchBenchmarkTest implements TestInterface {
     @Test
     public void run() {
         //GIVEN
-        BinarySearchBenchmark unOptimized = new BinarySearchBenchmark(totalCalls, totalIterations, target);
-        BinarySearchBenchmark optimized = new BinarySearchBenchmark(totalCalls, totalIterations, target);
+        BinarySearchOptimizations unOptimized = new BinarySearchOptimizations(totalCalls, totalIterations, target);
+        BinarySearchOptimizations optimized = new BinarySearchOptimizations(totalCalls, totalIterations, target);
 
         //WHEN
         unOptimized.unOptimizedTest();
@@ -20,7 +20,7 @@ public class BinarySearchBenchmarkTest implements TestInterface {
         Assertions.assertTrue(unOptimized.getAvgProcessTimeInNanoSeconds() > optimized.getAvgProcessTimeInNanoSeconds());
 
         System.out.println("*".repeat(100));
-        System.out.println("* ---------- BinarySearchBenchmark Test Results ----------");
+        System.out.println("* ---------- BinarySearchOptimizations Test Results ----------");
         System.out.println("* " + "unOptimized average processing time: " + unOptimized.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("* " + "optimized average processing time:   " + optimized.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("-".repeat(100));

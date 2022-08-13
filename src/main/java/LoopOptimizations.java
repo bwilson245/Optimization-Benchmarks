@@ -1,6 +1,6 @@
-public class LoopBenchmark extends Benchmark{
+public class LoopOptimizations extends Optimizations {
 
-    public LoopBenchmark(int totalCalls, int iterationCount) {
+    public LoopOptimizations(int totalCalls, int iterationCount) {
         super(totalCalls, iterationCount);
     }
 

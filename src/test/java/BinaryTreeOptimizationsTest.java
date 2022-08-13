@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class BinaryTreeBenchmarkTest implements TestInterface{
+public class BinaryTreeOptimizationsTest implements TestInterface{
     int totalCalls = 100;
     int totalIterations = 1000;
     int target = totalIterations - 1;
@@ -12,12 +12,12 @@ public class BinaryTreeBenchmarkTest implements TestInterface{
     @Test
     public void run() {
         //GIVEN
-        BinaryTreeBenchmark depthFirstRecursive = new BinaryTreeBenchmark(totalCalls, totalIterations, target, KB);
-        BinaryTreeBenchmark depthFirstIterative = new BinaryTreeBenchmark(totalCalls, totalIterations, target, KB);
-        BinaryTreeBenchmark breadthFirstRecursive = new BinaryTreeBenchmark(totalCalls, totalIterations, target, KB);
-        BinaryTreeBenchmark breadthFirstIterative = new BinaryTreeBenchmark(totalCalls, totalIterations, target, KB);
+        BinaryTreeOptimizations depthFirstRecursive = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
+        BinaryTreeOptimizations depthFirstIterative = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
+        BinaryTreeOptimizations breadthFirstRecursive = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
+        BinaryTreeOptimizations breadthFirstIterative = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
 
-        BinaryTreeBenchmark invalidTarget = new BinaryTreeBenchmark(totalCalls, totalIterations, -1, KB);
+        BinaryTreeOptimizations invalidTarget = new BinaryTreeOptimizations(totalCalls, totalIterations, -1, KB);
 
 
         //WHEN
@@ -57,7 +57,7 @@ public class BinaryTreeBenchmarkTest implements TestInterface{
         double binaryMemory = depthFirstIterative.getAvgMemoryUsedInKb();
 
         System.out.println("*".repeat(100));
-        System.out.println("* ---------- BinaryTreeBenchmark Recursive Test Results ----------");
+        System.out.println("* ---------- BinaryTreeOptimizations Recursive Test Results ----------");
         System.out.println("* " + "Recursive average processing time:           " + depthFirstRecursive.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("* " + "Recursive average memory used:               " + depthFirstRecursive.getAvgMemoryUsedInKb() + " kb");
         System.out.println("* " + "Iterative average processing time:           " + depthFirstIterative.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
@@ -75,7 +75,7 @@ public class BinaryTreeBenchmarkTest implements TestInterface{
         binaryMemory = breadthFirstIterative.getAvgMemoryUsedInKb();
 
         System.out.println("*".repeat(100));
-        System.out.println("* ---------- BinaryTreeBenchmark Breadth-First Test Results ----------");
+        System.out.println("* ---------- BinaryTreeOptimizations Breadth-First Test Results ----------");
         System.out.println("* " + "Recursive average processing time:           " + breadthFirstRecursive.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("* " + "Recursive average memory used:               " + breadthFirstRecursive.getAvgMemoryUsedInKb() + " kb");
         System.out.println("* " + "Iterative average processing time:           " + breadthFirstIterative.getAvgProcessTimeInNanoSeconds() + " nanoseconds");

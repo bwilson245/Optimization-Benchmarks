@@ -1,5 +1,5 @@
-public class ObjectInstantiationBenchmark extends Benchmark{
-    public ObjectInstantiationBenchmark(int totalCalls, int iterationCount) {
+public class ObjectInstantiationOptimizations extends Optimizations {
+    public ObjectInstantiationOptimizations(int totalCalls, int iterationCount) {
         super(totalCalls, iterationCount);
     }
 
