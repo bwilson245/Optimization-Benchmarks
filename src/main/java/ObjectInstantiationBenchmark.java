@@ -5,10 +5,10 @@ public class ObjectInstantiationBenchmark extends Benchmark{
 
     public void unOptimizedTest(){
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 StringBuilder builder = new StringBuilder();
                 builder.append("TEST".repeat(20));
             }
@@ -19,11 +19,11 @@ public class ObjectInstantiationBenchmark extends Benchmark{
 
     public void optimizedTest(){
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             StringBuilder builder = new StringBuilder();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 builder.setLength(0);
                 builder.append("TEST".repeat(20));
             }

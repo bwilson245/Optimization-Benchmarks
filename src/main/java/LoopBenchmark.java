@@ -22,10 +22,10 @@ public class LoopBenchmark extends Benchmark{
 
     public void optimizedTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 String res;
                 if (j % 3 == 0) {
                     res = "*".repeat(200);

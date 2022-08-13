@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.lang.annotation.Annotation;
-
 public class VariableBenchmarkTest implements TestInterface {
     int totalCalls = 100;
     int totalIterations = 1000;
@@ -42,41 +40,46 @@ public class VariableBenchmarkTest implements TestInterface {
 
         System.out.println("*".repeat(100));
         System.out.println("* ---------- VariableBenchmark Integer Test Results ----------");
-        System.out.println("* " + "unOptimized average processing time in nanoseconds: " + unOptimizedInteger.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "optimized average processing time in nanoseconds:   " + optimizedInt.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "overall speed improvement in nanoseconds:           " + (unOptimizedInteger.getAvgProcessTimeInNanoSeconds() - optimizedInt.getAvgProcessTimeInNanoSeconds()));
+        System.out.println("* " + "Wrapper average processing time:     " + unOptimizedInteger.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("* " + "Primitive average processing time:   " + optimizedInt.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("-".repeat(100));
+        System.out.println("* " + "overall speed improvement:           " + (unOptimizedInteger.getAvgProcessTimeInNanoSeconds() - optimizedInt.getAvgProcessTimeInNanoSeconds()) + " nanoseconds");
         System.out.println("*".repeat(100));
         System.out.println();
 
         System.out.println("*".repeat(100));
         System.out.println("* ---------- VariableBenchmark Long Test Results ----------");
-        System.out.println("* " + "unOptimized average processing time in nanoseconds: " + unOptimizedLong.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "optimized average processing time in nanoseconds:   " + optimizedLong.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "overall speed improvement in nanoseconds:           " + (unOptimizedLong.getAvgProcessTimeInNanoSeconds() - optimizedLong.getAvgProcessTimeInNanoSeconds()));
+        System.out.println("* " + "Wrapper average processing time:     " + unOptimizedLong.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("* " + "Primitive average processing time:   " + optimizedLong.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("-".repeat(100));
+        System.out.println("* " + "overall speed improvement:           " + (unOptimizedLong.getAvgProcessTimeInNanoSeconds() - optimizedLong.getAvgProcessTimeInNanoSeconds()) + " nanoseconds");
         System.out.println("*".repeat(100));
         System.out.println();
 
         System.out.println("*".repeat(100));
         System.out.println("* ---------- VariableBenchmark Float Test Results ----------");
-        System.out.println("* " + "unOptimized average processing time in nanoseconds: " + unOptimizedFloat.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "optimized average processing time in nanoseconds:   " + optimizedFloat.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "overall speed improvement in nanoseconds:           " + (unOptimizedFloat.getAvgProcessTimeInNanoSeconds() - optimizedFloat.getAvgProcessTimeInNanoSeconds()));
+        System.out.println("* " + "Wrapper average processing time:     " + unOptimizedFloat.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("* " + "Primitive average processing time:   " + optimizedFloat.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("-".repeat(100));
+        System.out.println("* " + "overall speed improvement:           " + (unOptimizedFloat.getAvgProcessTimeInNanoSeconds() - optimizedFloat.getAvgProcessTimeInNanoSeconds()) + " nanoseconds");
         System.out.println("*".repeat(100));
         System.out.println();
 
         System.out.println("*".repeat(100));
         System.out.println("* ---------- VariableBenchmark Double Test Results ----------");
-        System.out.println("* " + "unOptimized average processing time in nanoseconds: " + unOptimizedDouble.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "optimized average processing time in nanoseconds:   " + optimizedDouble.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "overall speed improvement in nanoseconds:           " + (unOptimizedDouble.getAvgProcessTimeInNanoSeconds() - optimizedDouble.getAvgProcessTimeInNanoSeconds()));
+        System.out.println("* " + "Wrapper average processing time:     " + unOptimizedDouble.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("* " + "Primitive average processing time:   " + optimizedDouble.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("-".repeat(100));
+        System.out.println("* " + "overall speed improvement:           " + (unOptimizedDouble.getAvgProcessTimeInNanoSeconds() - optimizedDouble.getAvgProcessTimeInNanoSeconds()) + " nanoseconds");
         System.out.println("*".repeat(100));
         System.out.println();
 
         System.out.println("*".repeat(100));
         System.out.println("* ---------- VariableBenchmark Character Test Results ----------");
-        System.out.println("* " + "unOptimized average processing time in nanoseconds: " + unOptimizedCharacter.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "optimized average processing time in nanoseconds:   " + optimizedChar.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "overall speed improvement in nanoseconds:           " + (unOptimizedCharacter.getAvgProcessTimeInNanoSeconds() - optimizedChar.getAvgProcessTimeInNanoSeconds()));
+        System.out.println("* " + "Wrapper average processing time:     " + unOptimizedCharacter.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("* " + "Primitive average processing time:   " + optimizedChar.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("-".repeat(100));
+        System.out.println("* " + "overall speed improvement:           " + (unOptimizedCharacter.getAvgProcessTimeInNanoSeconds() - optimizedChar.getAvgProcessTimeInNanoSeconds()) + " nanoseconds");
         System.out.println("*".repeat(100));
         System.out.println();
     }

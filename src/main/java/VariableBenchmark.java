@@ -8,10 +8,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void IntegerTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 Integer test = 1;
             }
             add(System.nanoTime() - time);
@@ -21,10 +21,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void intTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 int test = 1;
             }
             add(System.nanoTime() - time);
@@ -34,10 +34,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void DoubleTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 Double test = 1.0;
             }
             add(System.nanoTime() - time);
@@ -47,10 +47,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void doubleTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 double test = 1.0;
             }
             add(System.nanoTime() - time);
@@ -60,10 +60,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void LongTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 Long test = 1L;
             }
             add(System.nanoTime() - time);
@@ -73,10 +73,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void longTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 long test = 1L;
             }
             add(System.nanoTime() - time);
@@ -86,10 +86,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void FloatTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 Float test = 1.0f;
             }
             add(System.nanoTime() - time);
@@ -99,10 +99,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void floatTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 float test = 1.0f;
             }
             add(System.nanoTime() - time);
@@ -112,10 +112,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void CharacterTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 Character test = 'a';
             }
             add(System.nanoTime() - time);
@@ -125,10 +125,10 @@ public class VariableBenchmark extends Benchmark {
 
     public void charTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 char test = 'a';
             }
             add(System.nanoTime() - time);

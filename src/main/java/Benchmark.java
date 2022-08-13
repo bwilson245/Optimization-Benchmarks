@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Benchmark {
-    protected List<Long> processTimes;
-    protected long avgProcessTimeInNanoSeconds;
+    private List<Long> processTimes;
+    private long avgProcessTimeInNanoSeconds;
     protected int totalCalls;
     protected int iterationCount;
 
@@ -18,13 +18,16 @@ public abstract class Benchmark {
         for (Long l : processTimes) {
             sum += l;
         }
-        this.avgProcessTimeInNanoSeconds = sum / this.processTimes.size();
+        if (processTimes.size() > 0) {
+            this.avgProcessTimeInNanoSeconds = sum / this.processTimes.size();
+        }
     }
 
     public void add(long time) {
         processTimes.add(time);
         System.gc();
     }
+
 
     public long getAvgProcessTimeInNanoSeconds() {
         return avgProcessTimeInNanoSeconds;

@@ -21,9 +21,10 @@ public class BinarySearchBenchmarkTest implements TestInterface {
 
         System.out.println("*".repeat(100));
         System.out.println("* ---------- BinarySearchBenchmark Test Results ----------");
-        System.out.println("* " + "unOptimized average processing time in nanoseconds: " + unOptimized.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "optimized average processing time in nanoseconds:   " + optimized.getAvgProcessTimeInNanoSeconds());
-        System.out.println("* " + "overall speed improvement in nanoseconds:           " + (unOptimized.getAvgProcessTimeInNanoSeconds() - optimized.getAvgProcessTimeInNanoSeconds()));
+        System.out.println("* " + "unOptimized average processing time: " + unOptimized.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("* " + "optimized average processing time:   " + optimized.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("-".repeat(100));
+        System.out.println("* " + "overall speed improvement:           " + (unOptimized.getAvgProcessTimeInNanoSeconds() - optimized.getAvgProcessTimeInNanoSeconds()) + " nanoseconds");
         System.out.println("*".repeat(100));
         System.out.println();
     }

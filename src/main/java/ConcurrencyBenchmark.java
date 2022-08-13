@@ -9,10 +9,10 @@ public class ConcurrencyBenchmark extends Benchmark{
 
     public void unOptimizedTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 simulatedLoad();
             }
             add(System.nanoTime() - time);
@@ -23,11 +23,11 @@ public class ConcurrencyBenchmark extends Benchmark{
     public void optimizedTest() {
         ExecutorService service;
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             service = Executors.newCachedThreadPool();
             int j;
-            for (j = 0; j++ < iterationCount - 1; ) {
+            for (j = -1; j++ < iterationCount - 1; ) {
                 service.submit(this::simulatedLoad);
             }
             service.shutdown();

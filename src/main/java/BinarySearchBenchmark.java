@@ -12,10 +12,10 @@ public class BinarySearchBenchmark extends Benchmark {
 
     public void unOptimizedTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int j;
-            for (j = 0; j++ < array.length - 1; ) {
+            for (j = -1; j++ < array.length - 1; ) {
                 if (array[j] == target) {
                     break;
                 }
@@ -27,7 +27,7 @@ public class BinarySearchBenchmark extends Benchmark {
 
     public void optimizedTest() {
         int i;
-        for (i = 0; i++ < totalCalls - 1; ) {
+        for (i = -1; i++ < totalCalls - 1; ) {
             long time = System.nanoTime();
             int high = array.length - 1;
             int low = 0;
