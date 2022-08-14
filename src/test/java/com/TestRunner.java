@@ -1,6 +1,7 @@
 package com;
 
-import com.compares.ContainsMethodTest;
+import com.methods.AddMethodTest;
+import com.methods.ContainsMethodTest;
 import com.optimizations.*;
 import org.junit.jupiter.api.Test;
 
@@ -18,8 +19,9 @@ public class TestRunner {
         OptimizationsInterface test4 = new ConcurrencyOptimizationsTest();
         OptimizationsInterface test5 = new BinaryTreeOptimizationsTest();
         OptimizationsInterface test6 = new ContainsMethodTest();
+        OptimizationsInterface test7 = new AddMethodTest();
 
-        List<OptimizationsInterface> tests = List.of(test0, test2, test3, test4, test5, test6);
+        List<OptimizationsInterface> tests = List.of(test0, test2, test3, test4, test5, test6, test7);
 
         for (OptimizationsInterface i : tests) {
             for (Method m : i.getClass().getDeclaredMethods()) {

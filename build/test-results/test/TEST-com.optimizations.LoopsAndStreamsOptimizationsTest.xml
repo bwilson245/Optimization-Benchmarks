@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.optimizations.LoopsAndStreamsOptimizationsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-14T15:11:56" hostname="BENWILSON" time="4.639">
+  <properties/>
+  <testcase name="run()" classname="com.optimizations.LoopsAndStreamsOptimizationsTest" time="4.639"/>
+  <system-out><![CDATA[####################################################################################################
+# ---------- LoopsAndStreams Test Results ----------
+# stream average processing time: 164033 nanoseconds
+# loop average processing time:   28704 nanoseconds
+# ----------------------------------------------------------------------------------------------------
+# loop speed improvement:           135329 nanoseconds
+####################################################################################################
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

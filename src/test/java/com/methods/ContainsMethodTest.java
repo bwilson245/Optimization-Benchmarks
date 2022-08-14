@@ -1,6 +1,5 @@
-package com.compares;
+package com.methods;
 
-import com.methods.ContainsMethod;
 import com.OptimizationsInterface;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
