@@ -1,94 +1,118 @@
-f****************************************************************************************************
-@* ---------- VariableBenchmark Integer Test Results ----------
-:* Wrapper average processing time:     25243 nanoseconds
-9* Primitive average processing time:   9506 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           15737 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+D# ---------- VariableOptimizations Integer Test Results ----------
+:# Wrapper average processing time:     36630 nanoseconds
+:# Primitive average processing time:   13190 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+:# overall speed improvement:           23440 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-=* ---------- VariableBenchmark Long Test Results ----------
-:* Wrapper average processing time:     27739 nanoseconds
-:* Primitive average processing time:   10650 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           17089 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+A# ---------- VariableOptimizations Long Test Results ----------
+:# Wrapper average processing time:     40155 nanoseconds
+:# Primitive average processing time:   11855 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+:# overall speed improvement:           28300 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
->* ---------- VariableBenchmark Float Test Results ----------
-:* Wrapper average processing time:     32845 nanoseconds
-:* Primitive average processing time:   11142 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           21703 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+B# ---------- VariableOptimizations Float Test Results ----------
+:# Wrapper average processing time:     45575 nanoseconds
+:# Primitive average processing time:   13020 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+:# overall speed improvement:           32555 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-?* ---------- VariableBenchmark Double Test Results ----------
-:* Wrapper average processing time:     32203 nanoseconds
-:* Primitive average processing time:   11129 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           21074 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+C# ---------- VariableOptimizations Double Test Results ----------
+:# Wrapper average processing time:     45380 nanoseconds
+:# Primitive average processing time:   10950 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+:# overall speed improvement:           34430 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-B* ---------- VariableBenchmark Character Test Results ----------
-:* Wrapper average processing time:     26934 nanoseconds
-:* Primitive average processing time:   11240 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           15694 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+F# ---------- VariableOptimizations Character Test Results ----------
+:# Wrapper average processing time:     35610 nanoseconds
+:# Primitive average processing time:   10430 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+:# overall speed improvement:           25180 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-4* ---------- LoopBenchmark Test Results ----------
-:* unOptimized average processing time: 80117 nanoseconds
-:* optimized average processing time:   60204 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           19913 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+D# ---------- BinarySearchOptimizationsTest Test Results ----------
+:# unOptimized average processing time: 76170 nanoseconds
+9# optimized average processing time:   1980 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+:# overall speed improvement:           74190 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-<* ---------- BinarySearchBenchmark Test Results ----------
-:* unOptimized average processing time: 14134 nanoseconds
-9* optimized average processing time:   2065 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           12069 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+G# ---------- ObjectInstantiationOptimizations Test Results ----------
+<# unOptimized average processing time: 1029030 nanoseconds
+;# optimized average processing time:   762665 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+;# overall speed improvement:           266365 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-C* ---------- ObjectInstantiationBenchmark Test Results ----------
-;* unOptimized average processing time: 137636 nanoseconds
-;* optimized average processing time:   110535 nanoseconds
-f----------------------------------------------------------------------------------------------------
-:* overall speed improvement:           27101 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+?# ---------- ConcurrencyOptimizations Test Results ----------
+=# unOptimized average processing time: 27790795 nanoseconds
+=# optimized average processing time:   19105715 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+<# overall speed improvement:           8685080 nanoseconds
+f####################################################################################################
 
-f****************************************************************************************************
-;* ---------- ConcurrencyBenchmark Test Results ----------
-=* unOptimized average processing time: 22843772 nanoseconds
-=* optimized average processing time:   14169738 nanoseconds
-f----------------------------------------------------------------------------------------------------
-<* overall speed improvement:           8674034 nanoseconds
-f****************************************************************************************************
+f####################################################################################################
+N# ---------- BinaryTreeOptimizationsTest Depth-First Test Results ----------
+B# Recursive average processing time:           16885 nanoseconds
+A# Recursive average memory used:               3983.79453125 kb
+B# Iterative average processing time:           34820 nanoseconds
+;# Iterative average memory used:               2.59375 kb
+h# ----------------------------------------------------------------------------------------------------
+B# recursive is faster by:                      17935 nanoseconds
+A# iterative memory used is lower by:           3981.20078125 kb
+f####################################################################################################
 
-f****************************************************************************************************
-D* ---------- BinaryTreeBenchmark Recursive Test Results ----------
-A* Recursive average processing time:           8775 nanoseconds
-B* Recursive average memory used:               3972.770390625 kb
-B* Iterative average processing time:           20542 nanoseconds
-=* Iterative average memory used:               2.5678125 kb
-f----------------------------------------------------------------------------------------------------
-B* recursive is faster by:                      11767 nanoseconds
-B* iterative memory used is lower by:           3970.202578125 kb
-f****************************************************************************************************
+f####################################################################################################
+P# ---------- BinaryTreeOptimizationsTest Breadth-First Test Results ----------
+A# Recursive average processing time:           2990 nanoseconds
+A# Recursive average memory used:               3985.87578125 kb
+D# Iterative average processing time:           9276845 nanoseconds
+># Iterative average memory used:               15.5234375 kb
+h# ----------------------------------------------------------------------------------------------------
+G# recursive is faster by:                        9273855 nanoseconds.
+D# iterative memory used is lower by:             3970.35234375 kb.
+f####################################################################################################
 
-f****************************************************************************************************
-H* ---------- BinaryTreeBenchmark Breadth-First Test Results ----------
-A* Recursive average processing time:           2756 nanoseconds
-?* Recursive average memory used:               3984.105625 kb
-B* Iterative average processing time:           72215 nanoseconds
-;* Iterative average memory used:               15.4975 kb
-f----------------------------------------------------------------------------------------------------
-E* recursive is faster by:                        69459 nanoseconds.
-B* iterative memory used is lower by:             3968.608125 kb.
-f****************************************************************************************************
+f####################################################################################################
+?# ---------- ContainsMethod LowTarget Test Results ----------
+5# LIST average processing time:    7175 nanoseconds
+5# SET average processing time:     2960 nanoseconds
+5# QUEUE average processing time:   5225 nanoseconds
+5# STACK average processing time:   5095 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+(# LIST had the longest processing time
+(# SET had the shortest processing time
+5# overall speed improvement:       4215 nanoseconds
+f####################################################################################################
+
+f####################################################################################################
+@# ---------- ContainsMethod HighTarget Test Results ----------
+7# LIST average processing time:    196760 nanoseconds
+5# SET average processing time:     7480 nanoseconds
+7# QUEUE average processing time:   182955 nanoseconds
+7# STACK average processing time:   177825 nanoseconds
+h# ----------------------------------------------------------------------------------------------------
+(# LIST had the longest processing time
+(# SET had the shortest processing time
+7# overall speed improvement:       189280 nanoseconds
+f####################################################################################################
+
+f####################################################################################################
+># ---------- ContainsMethod Individual Statistics ----------
+P# LIST lowTarget time is faster than highTarget time by:    189585 nanoseconds
+N# SET lowTarget time is faster than highTarget time by:     4520 nanoseconds
+P# QUEUE lowTarget time is faster than highTarget time by:   177730 nanoseconds
+P# STACK lowTarget time is faster than highTarget time by:   172730 nanoseconds
+f####################################################################################################
 
