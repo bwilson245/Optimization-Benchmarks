@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.optimizations.BinaryTreeOptimizationsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-14T15:35:24" hostname="BENWILSON" time="2.442">
+  <properties/>
+  <testcase name="run()" classname="com.optimizations.BinaryTreeOptimizationsTest" time="2.442"/>
+  <system-out><![CDATA[####################################################################################################
+# ---------- BinaryTreeOptimizationsTest Depth-First Test Results ----------
+# Recursive average processing time:           14785 nanoseconds
+# Recursive average memory used:               3871.1078125 kb
+# Iterative average processing time:           39025 nanoseconds
+# Iterative average memory used:               71.625 kb
+# ----------------------------------------------------------------------------------------------------
+# recursive is faster by:                      24240 nanoseconds
+# iterative memory used is lower by:           3799.4828125 kb
+####################################################################################################
+
+####################################################################################################
+# ---------- BinaryTreeOptimizationsTest Iterative Test Results ----------
+# Depth-First average processing time:           39025 nanoseconds
+# Depth-First average memory used:               71.625 kb
+# Breadth-First average processing time:         8451445 nanoseconds
+# Breadth-First average memory used:             71.625 kb
+# ----------------------------------------------------------------------------------------------------
+# Depth-First is faster by:                        8412420 nanoseconds.
+# Breadth-First memory used is lower by:             0.0 kb.
+####################################################################################################
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -41,10 +41,6 @@ public class BinaryTreeOptimizations extends Optimizations {
                     addTime(depthFirstRecursiveSearchTIME());
                     break;
                 }
-                case "breadthFirstRecursiveSearchTIME": {
-                    addTime(breadthFirstRecursiveSearchTIME());
-                    break;
-                }
                 case "depthFirstIterativeSearchMEMORY": {
                     addMemory(depthFirstIterativeSearchMEMORY());
                     break;
@@ -55,10 +51,6 @@ public class BinaryTreeOptimizations extends Optimizations {
                 }
                 case "depthFirstRecursiveSearchMEMORY": {
                     addMemory(depthFirstRecursiveSearchMEMORY());
-                    break;
-                }
-                case "breadthFirstRecursiveSearchMEMORY": {
-                    addMemory(breadthFirstRecursiveSearchMEMORY());
                     break;
                 }
                 default:
@@ -164,15 +156,6 @@ public class BinaryTreeOptimizations extends Optimizations {
         return System.nanoTime() - time;
     }
 
-    public long breadthFirstRecursiveSearchTIME() {
-        long time = System.nanoTime();
-        boolean found = recursiveSearchBreadthFirstTIME(node);
-        if (!found) {
-            throw new RuntimeException("Not Found");
-        }
-        return System.nanoTime() - time;
-    }
-
     private boolean recursiveSearchDepthFirstTIME(Node node) {
         if (node == null) {
             return false;
@@ -185,21 +168,6 @@ public class BinaryTreeOptimizations extends Optimizations {
         boolean right = recursiveSearchDepthFirstTIME(node.right);
 
         return left || right;
-    }
-
-    private boolean recursiveSearchBreadthFirstTIME(Node node) {
-        if (node == null) {
-            return false;
-        }
-        if (node.value == target) {
-            return true;
-        }
-
-        if (target < node.value) {
-            return recursiveSearchBreadthFirstTIME(node.left);
-        } else {
-            return recursiveSearchBreadthFirstTIME(node.right);
-        }
     }
 
 
@@ -262,15 +230,6 @@ public class BinaryTreeOptimizations extends Optimizations {
         return memUsed;
     }
 
-    public double breadthFirstRecursiveSearchMEMORY() {
-        memUsed = MemoryTester.getUsedMemory(memType);
-        boolean found = recursiveSearchBreadthFirstMEMORY(node);
-        if (!found) {
-            throw new RuntimeException("Not Found");
-        }
-        return memUsed;
-    }
-
     private boolean recursiveSearchDepthFirstMEMORY(Node node) {
         if (node == null) {
             memUsed = Math.max(memUsed,MemoryTester.getUsedMemory(memType));
@@ -286,23 +245,5 @@ public class BinaryTreeOptimizations extends Optimizations {
 
         memUsed = Math.max(memUsed,MemoryTester.getUsedMemory(memType));
         return left || right;
-    }
-
-    private boolean recursiveSearchBreadthFirstMEMORY(Node node) {
-        if (node == null) {
-            memUsed = Math.max(memUsed, MemoryTester.getUsedMemory(memType));
-            return false;
-        }
-        if (node.value == target) {
-            memUsed = Math.max(memUsed,MemoryTester.getUsedMemory(memType));
-            return true;
-        }
-        if (target < node.value) {
-            memUsed = Math.max(memUsed,MemoryTester.getUsedMemory(memType));
-            return recursiveSearchBreadthFirstMEMORY(node.left);
-        } else {
-            memUsed = Math.max(memUsed,MemoryTester.getUsedMemory(memType));
-            return recursiveSearchBreadthFirstMEMORY(node.right);
-        }
     }
 }

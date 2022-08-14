@@ -1,10 +1,11 @@
 package com.optimizations;
 
+import com.OptimizationsInterface;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class LoopsAndStreamsOptimizationsTest {
+public class LoopsAndStreamsOptimizationsTest implements OptimizationsInterface {
     int totalCalls = 100;
     int totalIterations = 100000;
 

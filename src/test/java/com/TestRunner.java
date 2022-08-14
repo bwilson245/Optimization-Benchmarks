@@ -20,8 +20,9 @@ public class TestRunner {
         OptimizationsInterface test5 = new BinaryTreeOptimizationsTest();
         OptimizationsInterface test6 = new ContainsMethodTest();
         OptimizationsInterface test7 = new AddMethodTest();
+        OptimizationsInterface test8 = new LoopsAndStreamsOptimizationsTest();
 
-        List<OptimizationsInterface> tests = List.of(test0, test2, test3, test4, test5, test6, test7);
+        List<OptimizationsInterface> tests = List.of(test0, test2, test3, test4, test5, test6, test7, test8);
 
         for (OptimizationsInterface i : tests) {
             for (Method m : i.getClass().getDeclaredMethods()) {

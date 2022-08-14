@@ -24,7 +24,6 @@ public class BinaryTreeOptimizationsTest implements OptimizationsInterface {
         //GIVEN
         BinaryTreeOptimizations depthFirstRecursive = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
         BinaryTreeOptimizations depthFirstIterative = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
-        BinaryTreeOptimizations breadthFirstRecursive = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
         BinaryTreeOptimizations breadthFirstIterative = new BinaryTreeOptimizations(totalCalls, totalIterations, target, KB);
 
         BinaryTreeOptimizations invalidTarget = new BinaryTreeOptimizations(totalCalls, totalIterations, -1, KB);
@@ -37,34 +36,24 @@ public class BinaryTreeOptimizationsTest implements OptimizationsInterface {
         depthFirstIterative.execute("depthFirstIterativeSearchTIME");
         depthFirstIterative.execute("depthFirstIterativeSearchMEMORY");
 
-        breadthFirstRecursive.execute("breadthFirstRecursiveSearchTIME");
-        breadthFirstRecursive.execute("breadthFirstRecursiveSearchMEMORY");
-
         breadthFirstIterative.execute("breadthFirstIterativeSearchTIME");
         breadthFirstIterative.execute("breadthFirstIterativeSearchMEMORY");
 
         //THEN
         Assertions.assertThrows(RuntimeException.class, invalidTarget::depthFirstRecursiveSearchTIME);
         Assertions.assertThrows(RuntimeException.class, invalidTarget::depthFirstRecursiveSearchMEMORY);
-
         Assertions.assertThrows(RuntimeException.class, invalidTarget::depthFirstIterativeSearchMEMORY);
         Assertions.assertThrows(RuntimeException.class, invalidTarget::depthFirstIterativeSearchMEMORY);
-
-        Assertions.assertThrows(RuntimeException.class, invalidTarget::breadthFirstRecursiveSearchTIME);
-        Assertions.assertThrows(RuntimeException.class, invalidTarget::breadthFirstRecursiveSearchMEMORY);
-
         Assertions.assertThrows(RuntimeException.class, invalidTarget::breadthFirstIterativeSearchTIME);
         Assertions.assertThrows(RuntimeException.class, invalidTarget::breadthFirstIterativeSearchMEMORY);
 
         Assertions.assertTrue(depthFirstRecursive.getAvgProcessTimeInNanoSeconds() < depthFirstIterative.getAvgProcessTimeInNanoSeconds());
-        Assertions.assertTrue(breadthFirstRecursive.getAvgProcessTimeInNanoSeconds() < breadthFirstIterative.getAvgProcessTimeInNanoSeconds());
         Assertions.assertTrue(depthFirstRecursive.getAvgMemoryUsedInKb() > breadthFirstIterative.getAvgMemoryUsedInKb());
-        Assertions.assertTrue(breadthFirstRecursive.getAvgMemoryUsedInKb() > breadthFirstIterative.getAvgMemoryUsedInKb());
 
         long recursiveTime = depthFirstRecursive.getAvgProcessTimeInNanoSeconds();
-        long binaryTime = depthFirstIterative.getAvgProcessTimeInNanoSeconds();
+        long depthFirstTime = depthFirstIterative.getAvgProcessTimeInNanoSeconds();
         double recursiveMemory = depthFirstRecursive.getAvgMemoryUsedInKb();
-        double binaryMemory = depthFirstIterative.getAvgMemoryUsedInKb();
+        double depthFirstMemory = depthFirstIterative.getAvgMemoryUsedInKb();
 
         System.out.println("#".repeat(100));
         System.out.println("# ---------- BinaryTreeOptimizationsTest Depth-First Test Results ----------");
@@ -73,26 +62,24 @@ public class BinaryTreeOptimizationsTest implements OptimizationsInterface {
         System.out.println("# " + "Iterative average processing time:           " + depthFirstIterative.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
         System.out.println("# " + "Iterative average memory used:               " + depthFirstIterative.getAvgMemoryUsedInKb() + " kb");
         System.out.println("# " + "-".repeat(100));
-        System.out.println("# " + (recursiveTime < binaryTime ? "recursive" : "iterative") + " is faster by:                      " + (Math.max(recursiveTime, binaryTime) - Math.min(recursiveTime, binaryTime)) + " nanoseconds");
-        System.out.println("# " + (recursiveMemory < binaryMemory ? "recursive" : "iterative") + " memory used is lower by:           " + (Math.max(recursiveMemory, binaryMemory) - Math.min(recursiveMemory, binaryMemory)) + " kb");
+        System.out.println("# " + (recursiveTime < depthFirstTime ? "recursive" : "iterative") + " is faster by:                      " + (Math.max(recursiveTime, depthFirstTime) - Math.min(recursiveTime, depthFirstTime)) + " nanoseconds");
+        System.out.println("# " + (recursiveMemory < depthFirstMemory ? "recursive" : "iterative") + " memory used is lower by:           " + (Math.max(recursiveMemory, depthFirstMemory) - Math.min(recursiveMemory, depthFirstMemory)) + " kb");
         System.out.println("#".repeat(100));
 
         System.out.println();
 
-        recursiveTime = breadthFirstRecursive.getAvgProcessTimeInNanoSeconds();
-        binaryTime = breadthFirstIterative.getAvgProcessTimeInNanoSeconds();
-        recursiveMemory = breadthFirstRecursive.getAvgMemoryUsedInKb();
-        binaryMemory = breadthFirstIterative.getAvgMemoryUsedInKb();
+        long breadthFirstTime = breadthFirstIterative.getAvgProcessTimeInNanoSeconds();
+        double breadthFirstMemory = breadthFirstIterative.getAvgMemoryUsedInKb();
 
         System.out.println("#".repeat(100));
-        System.out.println("# ---------- BinaryTreeOptimizationsTest Breadth-First Test Results ----------");
-        System.out.println("# " + "Recursive average processing time:           " + breadthFirstRecursive.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
-        System.out.println("# " + "Recursive average memory used:               " + breadthFirstRecursive.getAvgMemoryUsedInKb() + " kb");
-        System.out.println("# " + "Iterative average processing time:           " + breadthFirstIterative.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
-        System.out.println("# " + "Iterative average memory used:               " + breadthFirstIterative.getAvgMemoryUsedInKb() + " kb");
+        System.out.println("# ---------- BinaryTreeOptimizationsTest Iterative Test Results ----------");
+        System.out.println("# " + "Depth-First average processing time:           " + depthFirstIterative.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("# " + "Depth-First average memory used:               " + depthFirstIterative.getAvgMemoryUsedInKb() + " kb");
+        System.out.println("# " + "Breadth-First average processing time:         " + breadthFirstIterative.getAvgProcessTimeInNanoSeconds() + " nanoseconds");
+        System.out.println("# " + "Breadth-First average memory used:             " + breadthFirstIterative.getAvgMemoryUsedInKb() + " kb");
         System.out.println("# " + "-".repeat(100));
-        System.out.println("# " + (recursiveTime < binaryTime ? "recursive" : "iterative") + " is faster by:                        " + (Math.max(recursiveTime, binaryTime) - Math.min(recursiveTime, binaryTime)) + " nanoseconds.");
-        System.out.println("# " + (recursiveMemory < binaryMemory ? "recursive" : "iterative") + " memory used is lower by:             " + (Math.max(recursiveMemory, binaryMemory) - Math.min(recursiveMemory, binaryMemory)) + " kb.");
+        System.out.println("# " + (breadthFirstTime < depthFirstTime ? "Breadth-First" : "Depth-First") + " is faster by:                        " + (Math.max(breadthFirstTime, depthFirstTime) - Math.min(breadthFirstTime, depthFirstTime)) + " nanoseconds.");
+        System.out.println("# " + (breadthFirstMemory <= depthFirstMemory ? "Breadth-First" : "Depth-First") + " memory used is lower by:             " + (Math.max(breadthFirstMemory, depthFirstMemory) - Math.min(breadthFirstMemory, depthFirstMemory)) + " kb.");
         System.out.println("#".repeat(100));
         System.out.println();
     }

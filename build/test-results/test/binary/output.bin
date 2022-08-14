@@ -1,8 +1,22 @@
 f####################################################################################################
-6# ---------- LoopsAndStreams Test Results ----------
-6# stream average processing time: 164033 nanoseconds
-5# loop average processing time:   28704 nanoseconds
+N# ---------- BinaryTreeOptimizationsTest Depth-First Test Results ----------
+B# Recursive average processing time:           14785 nanoseconds
+@# Recursive average memory used:               3871.1078125 kb
+B# Iterative average processing time:           39025 nanoseconds
+:# Iterative average memory used:               71.625 kb
 h# ----------------------------------------------------------------------------------------------------
-8# loop speed improvement:           135329 nanoseconds
+B# recursive is faster by:                      24240 nanoseconds
+@# iterative memory used is lower by:           3799.4828125 kb
+f####################################################################################################
+
+f####################################################################################################
+L# ---------- BinaryTreeOptimizationsTest Iterative Test Results ----------
+D# Depth-First average processing time:           39025 nanoseconds
+<# Depth-First average memory used:               71.625 kb
+F# Breadth-First average processing time:         8451445 nanoseconds
+<# Breadth-First average memory used:             71.625 kb
+h# ----------------------------------------------------------------------------------------------------
+I# Depth-First is faster by:                        8412420 nanoseconds.
+># Breadth-First memory used is lower by:             0.0 kb.
 f####################################################################################################
 
